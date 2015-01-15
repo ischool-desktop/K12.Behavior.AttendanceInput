@@ -91,6 +91,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApprovedResponderConigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovedResponderConigForm.Designer.cs">
+      <DependentUpon>ApprovedResponderConigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveRule.Designer.cs">
+      <DependentUpon>LeaveRule.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaveRequests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     <Compile Include="RequestDetail.Designer.cs">
       <DependentUpon>RequestDetail.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ApprovedResponderConigForm.resx">
+      <DependentUpon>ApprovedResponderConigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveRule.resx">
+      <DependentUpon>LeaveRule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaveRequests.resx">
       <DependentUpon>SaveRequests.cs</DependentUpon>
     </EmbeddedResource>

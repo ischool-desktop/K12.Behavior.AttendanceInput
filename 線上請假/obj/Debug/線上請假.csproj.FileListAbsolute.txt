@@ -38,3 +38,6 @@ C:\Users\Aaron\Desktop\huangwc_desktop\dev.sh_d\線上請假\obj\Debug\K12.Behav
 C:\Users\Aaron\Desktop\huangwc_desktop\dev.sh_d\線上請假\bin\Debug\K12.Behavior.AttendanceInput.dll.config
 C:\Users\Aaron\Desktop\huangwc_desktop\dev.sh_d\線上請假\bin\Debug\K12.Behavior.AttendanceInput.dll
 C:\Users\Aaron\Desktop\huangwc_desktop\dev.sh_d\線上請假\obj\Debug\K12.Behavior.AttendanceInput.dll
+C:\Users\Aaron\Desktop\huangwc_desktop\dev.sh_d\線上請假\obj\Debug\K12.Behavior.AttendanceInput.ApprovedResponderConigForm.resources
+C:\Users\Aaron\Desktop\huangwc_desktop\dev.sh_d\線上請假\obj\Debug\線上請假.csprojResolveAssemblyReference.cache
+C:\Users\Aaron\Desktop\huangwc_desktop\dev.sh_d\線上請假\obj\Debug\K12.Behavior.AttendanceInput.LeaveRule.resources

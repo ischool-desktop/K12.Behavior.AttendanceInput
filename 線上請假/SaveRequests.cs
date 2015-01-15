@@ -134,23 +134,28 @@ namespace K12.Behavior.AttendanceInput
                 if (!string.IsNullOrWhiteSpace(ar.ID))
                 {
                     arUpdate.Add(ar);
-                    log2.Add(ar.RefStudentID + "," + ar.SchoolYear + "," + ar.Semester + "," + ar.OccurDate + "," + arr.AttAbsenceType + "," + arr.AttPeriod);
+                    log3.Add(ar.RefStudentID + "," + ar.SchoolYear + "," + ar.Semester + "," + ar.OccurDate + "," + arr.AttAbsenceType + "," + arr.AttPeriod);
                 }
                 else
                 {
                     arInsert.Add(ar);
-                    log3.Add(ar.RefStudentID + "," + ar.SchoolYear + "," + ar.Semester + "," + ar.OccurDate + "," + arr.AttAbsenceType + "," + arr.AttPeriod);
+                    log2.Add(ar.RefStudentID + "," + ar.SchoolYear + "," + ar.Semester + "," + ar.OccurDate + "," + arr.AttAbsenceType + "," + arr.AttPeriod);
                 }
                 arrUpdate.Add(arr);
             }
             tool._A.UpdateValues(arrUpdate);
             ApplicationLog.Log("線上請假", "更新", "線上請假記錄共更新" + arrUpdate.Count + "筆資料\n以下為明細\n" + string.Join("\n", log1));
 
-            K12.Data.Attendance.Insert(arInsert);
-            ApplicationLog.Log("線上請假", "新增", "缺曠記錄共新增" + arInsert.Count + "筆資料\n以下為明細\n" + string.Join("\n", log2));
-
-            K12.Data.Attendance.Update(arUpdate);
-            ApplicationLog.Log("線上請假", "更新", "缺曠記錄共更新" + arUpdate.Count + "筆資料\n以下為明細\n" + string.Join("\n", log3));
+            if (arInsert.Count > 0)
+            {
+                K12.Data.Attendance.Insert(arInsert);
+                ApplicationLog.Log("線上請假", "新增", "缺曠記錄共新增" + arInsert.Count + "筆資料\n以下為明細\n" + string.Join("\n", log2));
+            }
+            if (arUpdate.Count > 0)
+            {
+                K12.Data.Attendance.Update(arUpdate);
+                ApplicationLog.Log("線上請假", "更新", "缺曠記錄共更新" + arUpdate.Count + "筆資料\n以下為明細\n" + string.Join("\n", log3));
+            }
 
             this.DialogResult = DialogResult.OK;
             this.Close();
